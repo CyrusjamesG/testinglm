@@ -1,0 +1,70 @@
+
+<!--motarvaraible-->
+
+
+
+<!doctype html>
+<html>
+<h1>SUPERION</h1>
+<h2>Controls</h2>
+
+
+<!--left motar-->
+<button onClick="drivel()" type="button">left</button>
+<p id="whywhy" style="display:none">goober</p>
+
+
+<!--bothmotoron-->
+<button onClick="drivef()" type="button">foward</button>
+
+
+<!--rightmotar-->
+<button onClick="driver()" type="button">Right</button>
+
+
+<!--nothing on-->
+<button onClick="none()" type="button">stop</button>
+
+
+
+
+<script>
+
+
+//motorpin
+motor1_a = machine.Pin(2, machine.Pin.OUT)  
+motor1_b = machine.Pin(3, machine.Pin.OUT)
+motor1_PWM = machine.Pin(0, machine.Pin.OUT)
+
+
+motor2_a = machine.Pin(4, machine.Pin.OUT)  
+motor2_b = machine.Pin(5, machine.Pin.OUT)
+motor2_PWM = machine.Pin(1, machine.Pin.OUT)
+
+
+
+
+
+
+function drivel()
+{ fetch('left')}
+
+function drivef()
+{ fetch('foward')}
+
+function driver()
+{ fetch('right')}
+
+function none()
+{ fetch('stop')}
+
+
+
+ 
+
+
+ 
+ 
+ 
+</script>
+</html>
