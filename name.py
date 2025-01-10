@@ -137,7 +137,9 @@ html = """
             try {
                 disableButtons();
                 const response = await fetch(url);
-                if (!response.ok) throw new Error('Network response was not ok');
+                 if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
                 await updateStatus('Command executed successfully');
             } catch (error) {
                 await updateStatus(`Error: ${error.message}`, true);
@@ -165,7 +167,7 @@ print('Listening on', addr)
 
 # Listen for connections
 while True:
-    try:
+
         cl, addr = s.accept()
         print('Client connected from', addr)
         request = cl.recv(1024)
@@ -187,8 +189,4 @@ while True:
         cl.send('HTTP/1.0 200 OK\r\nContent-type: text/html\r\n\r\n')
         cl.send(response)
         cl.close()
-
-    except OSError as e:
-        cl.close()
         print('Connection closed')
-
