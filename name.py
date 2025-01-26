@@ -64,8 +64,8 @@ def drive(direction):
         motor1_b.on()
         motor2_a.on()
         motor2_b.off()
-        motor1_PWM.duty_u16(65535)
-        motor2_PWM.duty_u16(65535)
+        motor1_PWM.duty_u16(50000)
+        motor2_PWM.duty_u16(50000)
         prevDrive = 'left'
     
     elif direction == "right":
@@ -73,9 +73,9 @@ def drive(direction):
         motor1_b.off()
         motor2_a.off()
         motor2_b.on()
-        motor1_PWM.duty_u16(65535)
-        motor2_PWM.duty_u16(65535)
-        prevDrive = 'right'
+        motor1_PWM.duty_u16(50000)
+        motor2_PWM.duty_u16(50000)
+       #prevDrive = 'right'
 
 # HTML for web control interface
 html = """ 
